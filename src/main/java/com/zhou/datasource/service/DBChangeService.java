@@ -41,7 +41,6 @@ public class DBChangeService {
      */
     @DBChange
     public List<User> getUser(@DBChange DataSource dataSource){
-        DBContextHolder.setDataSource(dataSource.getDatasourceId());
        return userMapper.get();
     }
 
