@@ -12,7 +12,7 @@ import java.util.List;
  */
 public interface DataSourceMapper {
 
-    @Select("SELECT * FROM datasource")
+    @Select("SELECT * FROM databasetype")
     List<DataSource> get();
 
 

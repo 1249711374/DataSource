@@ -1,5 +1,8 @@
 package com.zhou.datasource.model;
 
+import lombok.Getter;
+import lombok.Setter;
+
 /**
  * Created with IDEA
  *
@@ -7,6 +10,8 @@ package com.zhou.datasource.model;
  * @date : 2019/4/9 11:40
  * @info :
  */
+@Getter
+@Setter
 public class User {
     String userName;
     String age;

@@ -1,6 +1,7 @@
 package com.zhou.datasource.service;
 
 import com.zhou.datasource.annotation.DBChange;
+import com.zhou.datasource.dbconfig.DBContextHolder;
 import com.zhou.datasource.mapper.DataSourceMapper;
 import com.zhou.datasource.mapper.UserMapper;
 import com.zhou.datasource.model.DataSource;
@@ -19,7 +20,6 @@ import java.util.List;
  * @info :
  */
 @Service
-
 public class DBChangeService {
     @Autowired
     private DataSourceMapper dataSourceMapper;
@@ -41,6 +41,7 @@ public class DBChangeService {
      */
     @DBChange
     public List<User> getUser(@DBChange DataSource dataSource){
+        DBContextHolder.setDataSource(dataSource.getDatasourceId());
        return userMapper.get();
     }
 

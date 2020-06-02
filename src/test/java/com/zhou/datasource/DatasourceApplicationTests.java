@@ -37,7 +37,7 @@ public class DatasourceApplicationTests {
     public void contextLoads() {
         //取出数据库中的第一条数据源配置信息
         List<DataSource> list=dataSourceMapper.get();
-        DataSource d = list.get(0);
+        DataSource d = list.get(1);
         List<User> list1 = dbChangeService.getUser(d);
         list1.forEach(user -> System.out.println(user.getUserName()));
         /**
@@ -53,7 +53,7 @@ public class DatasourceApplicationTests {
     @Test
     public void get(){
         List<DataSource> list=dataSourceMapper.get();
-        DataSource d = list.get(0);
+        DataSource d = list.get(1);
         //创建数据源
         try {
             dynamicDataSource.createDataSourceWithCheck(d);
